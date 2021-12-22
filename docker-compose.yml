@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  server: 
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    image: node-app
+    volumes:
+      - ./backend/:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "5400:5400"  
+  client:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+    image: react-app
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:3000"
