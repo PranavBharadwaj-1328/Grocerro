@@ -21,7 +21,8 @@ connection.once('open', () => {
 });
 
 const cartRouter = require('./routes/cart');
-
+const userRouter = require('./routes/user');
+app.use('/auth', userRouter);
 app.use('/cart', cartRouter);
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);

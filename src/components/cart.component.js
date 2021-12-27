@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import {Link} from 'react-router-dom';
 export default class Cart extends Component {
     constructor(props) {
         super(props);
@@ -42,6 +42,19 @@ export default class Cart extends Component {
     render() {
         return (
             <div>
+                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                {/* <Link className="navbar-brand" to="/">Cart</Link> */}
+                <div className="collapse navbar-collapse">
+                    <ul className="navbar-nav mr-auto">
+                    <li className="nav-item">
+                            <Link className="navbar-brand" to="/cart">Cart</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="navbar-brand" to="/addItem">Add Item</Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
                 <h3>Grocerry Cart</h3>
                 <table className="table">
                     <thead className="thead-light">

@@ -23,4 +23,3 @@ router.route('/remove/:id').delete((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 module.exports = router;
-//Programming mosh

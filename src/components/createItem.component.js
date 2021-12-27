@@ -1,7 +1,6 @@
-import { Component } from 'react';
-// import {Link} from 'react-router-dom';
+import React,{ Component } from 'react';
 import axios from 'axios';
-
+import {Link} from 'react-router-dom';
 export default class CreateItem extends Component {
     constructor(props) {
         super(props);
@@ -36,11 +35,24 @@ export default class CreateItem extends Component {
         console.log(item);
         axios.post('http://localhost:5400/cart/add', item)
             .then(res => console.log(res.data));
-        window.location = '/';
+        window.location = '/cart';
     }
     render() {
         return (
             <div>
+                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                {/* <Link className="navbar-brand" to="/">Cart</Link> */}
+                <div className="collapse navbar-collapse">
+                    <ul className="navbar-nav mr-auto">
+                    <li className="nav-item">
+                            <Link className="navbar-brand" to="/cart">Cart</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="navbar-brand" to="/addItem">Add Item</Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
                 <h3>Add a new item</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
