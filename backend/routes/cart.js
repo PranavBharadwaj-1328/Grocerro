@@ -22,4 +22,8 @@ router.route('/remove/:id').delete((req, res) => {
         .then(() => res.json('Item deleted.'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
+<<<<<<< HEAD
 module.exports = router;
+=======
+module.exports = router;
+>>>>>>> 506251cf6365425cdfe80a1b9c0b9efa883baf6e
