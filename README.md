@@ -1,5 +1,5 @@
 ## Grocerro
-A grocerry list management app on MERN Stack. An application to keep track of all the grocerry list and it allows CRUD operations to all its users.
+A grocerry list management app on MERN Stack. 
 
 # To run the app
     run "docker-compose up --build"
